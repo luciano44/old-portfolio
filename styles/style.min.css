@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #fff;
+  --mainText: hsl(227,31%,15%);
+  --mainColor: hsl(227,31%,15%);
+  --description: red;
+}
+
+body {
+  background: var(--background);
+}
+
+header .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  width: 100%;
+  background: var(--mainColor);
+  display: flex;
+  padding: 4px 20%;
+  box-shadow: 0 0 2px #1f052e;
+}
+header .top-bar .switch {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 3px;
+  border-radius: 10px;
+  height: 70%;
+  min-width: 40px;
+  cursor: pointer;
+}
+header .top-bar .switch .switch-btn {
+  margin-left: 0px;
+  transition: ease-in-out margin-left 0.2s;
+  border-radius: 10px;
+  background: var(--mainColor);
+  height: 15px;
+  width: 15px;
+}
+header .top-bar .medias {
+  display: flex;
+  width: 150px;
+  height: 25px;
+  padding: 2px;
+}
+header .top-bar .medias a {
+  margin-left: 15px;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  filter: contrast(0) brightness(3);
+}
+header .top-bar .medias a img {
+  height: inherit;
+}
+header .top-bar .medias a:hover {
+  filter: contrast(0) brightness(1.5);
+}
+header .top-bar .medias .github {
+  background: rgba(255, 0, 0, 0);
+}
+header .top-bar .medias .linkedin {
+  background: rgba(255, 255, 255, 0);
+}
+header .top-bar .medias .email {
+  background: rgba(255, 255, 255, 0);
+}
+header .main-text {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  padding: 75px;
+  font-size: 2rem;
+  text-align: center;
+}
+header .main-text .main-text-left h1 {
+  font-family: "Roboto", monospace;
+  color: var(--mainText);
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+header .main-text .main-text-left h3 {
+  font-family: "Inconsolata", monospace;
+  color: var(--mainText);
+  font-weight: 200;
+  font-size: 1.5rem;
+  letter-spacing: 10px;
+}
+header .main-text .illustration-wrapper {
+  height: 100%;
+}
+header .main-text .illustration-wrapper .illustration {
+  transform: scale(1.2);
+  margin-top: 50px;
+  margin-left: 30px;
+  height: inherit;
+}
+
+main .profile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: inset 10px 0 0 #f7b56e;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  height: 200px;
+  padding: 10px;
+  border-radius: 0 15px 15px 0;
+  background: var(--mainColor);
+}
+main .profile .profile-main {
+  text-align: center;
+}
+main .profile .profile-main .profile-title {
+  color: #fff;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+}
+main .profile .profile-main .profile-description {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  max-width: 600px;
+}
+main .arrow-wrapper {
+  margin: 80px auto;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+main .arrow-wrapper .arrow {
+  height: inherit;
+  transform: rotate(90deg);
+  transition: 1s;
+  transition-property: margin;
+  transition-timing-function: ease-in-out;
+  filter: invert(0);
+  -webkit-user-drag: none;
+}
+main .knowledge {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  margin: 100px 50% 25px 0;
+  background: var(--mainText);
+  position: relative;
+}
+main .knowledge p {
+  color: var(--background);
+  text-align: center;
+  font-size: 2rem;
+  margin-right: 100px;
+  margin-left: auto;
+  text-indent: 50px;
+  font-family: "Roboto", sans-serif;
+}
+main .knowledge::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  height: 42px;
+  width: 42px;
+  right: -21px;
+  background: var(--mainText);
+  transform: rotate(45deg);
+}
+main .row {
+  position: relative;
+  margin-top: 25px;
+  margin: 25px auto 25px auto;
+  height: auto;
+  max-width: 800px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
+}
+main .row .row-main {
+  border-left: 5px dashed var(--background);
+  height: 100%;
+  position: absolute;
+  padding: 20px 20px 20px 100px;
+  margin-left: 10px;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+main .row .row-main .row-txt {
+  max-width: 900px;
+  margin-right: auto;
+  padding: 10px;
+}
+main .row .row-main .row-txt h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 2000;
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 0 100px var(--mainText);
+}
+main .row .row-main .row-txt p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-indent: 20px;
+  text-shadow: 0 0 100px var(--mainText);
+}
+main .row .row-bg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  filter: opacity(0.1) saturate(0);
+  transform: rotate(19deg) scale(2);
+  max-height: 200px;
+  max-width: 300px;
+  margin-left: 70%;
+  -webkit-user-drag: none;
+}
+
+footer {
+  height: 500px;
+  width: 100%;
+  margin-top: 150px;
+  background: var(--mainColor);
+}
+
+#html {
+  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
+}
+
+#css {
+  background: linear-gradient(90deg, #08225e, rgba(8, 34, 94, 0.85));
+}
+
+#js {
+  background: linear-gradient(90deg, #5e5008, rgba(94, 80, 8, 0.85));
+}
+
+#git {
+  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
+}
+
+#nodejs {
+  background: linear-gradient(90deg, #165e08, rgba(22, 94, 8, 0.85));
+}
+
+#express {
+  background: linear-gradient(90deg, #505e08, rgba(80, 94, 8, 0.85));
+}
+
+.general {
+  background: linear-gradient(90deg, rgba(26, 32, 50, 0.85), rgba(26, 32, 50, 0.65));
+}
+
+@media (max-width: 600px) {
+  main .profile {
+    height: 300px;
+  }
+  main .knowledge {
+    margin: 100px 40px 25px 0;
+    max-width: 300px;
+  }
+  main .knowledge p {
+    font-size: 2rem;
+    margin-right: 30px;
+  }
+  main .row {
+    height: 250px;
+  }
+  main .row .row-main {
+    padding: 10px;
+  }
+
+  .illustration-wrapper {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.min.css.map */

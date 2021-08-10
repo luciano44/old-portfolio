@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@mixin centerStuff {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@mixin rowColor($cor) {
+  background: linear-gradient(
+    90deg,
+    hsla($cor, 85%, 20%, 1),
+    hsla($cor, 85%, 20%, 0.85)
+    );
+}
+
+:root {
+  --background: #fff;
+  --mainText: hsl(227,31%,15%);
+  --mainColor: hsl(227,31%,15%);
+  --description: red;
+}
+
+body {
+  background: var(--background);
+}
+
+header {
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    background: var(--mainColor);
+    display: flex;
+    padding: 4px 20%;
+    box-shadow: 0 0 2px rgb(31, 5, 46);
+    .switch{
+      display:flex;
+      align-items: center;
+      background: rgb(255, 255, 255);
+      padding: 3px;
+      border-radius: 10px;
+      height: 70%;
+      min-width: 40px;
+      cursor: pointer;
+      .switch-btn{
+        margin-left: 0px;
+        transition: ease-in-out margin-left .2s;
+        border-radius: 10px;
+        background: var(--mainColor);
+        height:15px;
+        width: 15px;
+      }
+    }
+    .medias{
+      display: flex;
+      width: 150px;
+      height: 25px;
+      padding: 2px;
+      a {
+        img{
+          height: inherit;
+        }
+        margin-left: 15px;
+        height: 100%;
+        width: 30px;
+        cursor: pointer;
+        filter: contrast(0) brightness(3);
+        &:hover {
+          filter: contrast(0) brightness(1.5);
+        }
+      }
+      .github {
+        background: rgba(255, 0, 0, 0);
+      }
+      .linkedin {
+        background: hsla(0, 0%, 100%, 0%);
+      }
+      .email {
+        background: hsla(200, 100%, 100%, 0%);
+      }
+    }
+    
+  }
+
+  .main-text {
+    @include centerStuff;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+    padding: 75px;
+    font-size: 2rem;
+    text-align: center;
+    .main-text-left {
+      h1 {
+        font-family: "Roboto", monospace;
+        color: var(--mainText);
+        font-weight: 900;
+        margin-bottom: 50px;
+      }
+      h3 {
+        font-family: "Inconsolata", monospace;
+        color: var(--mainText);
+        font-weight: 200;
+        font-size: 1.5rem;
+        letter-spacing: 10px;
+      }
+    }
+    .illustration-wrapper {
+      height: 100%;
+      .illustration {
+        transform: scale(1.2);
+        margin-top: 50px;
+        margin-left: 30px;
+        height: inherit;
+      }
+    }
+  }
+}
+
+main {
+  .profile {
+    @include centerStuff;
+    box-shadow: inset 10px 0 0 hsl(31,89%,70%);
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 200px;
+    padding: 10px;
+    border-radius: 0 15px 15px 0;
+    background: var(--mainColor);
+
+    .profile-main {
+      text-align: center;
+      .profile-title {
+        color: #fff;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 30px;
+      }
+      .profile-description {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9rem;
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        max-width: 600px;
+      }
+    }
+  }
+
+  .arrow-wrapper {
+    margin: 80px auto;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    .arrow {
+      height: inherit;
+      transform: rotate(90deg);
+      transition: 1s;
+      transition-property: margin;
+      transition-timing-function: ease-in-out;
+      filter: invert(0);
+      -webkit-user-drag: none;
+    }
+  }
+
+  .knowledge {
+    @include centerStuff;
+    height: 60px;
+    margin: 100px 50% 25px 0;
+    background: var(--mainText);
+    position: relative;
+    p {
+      color: var(--background);
+      text-align: center;
+      font-size: 2rem;
+      margin-right: 100px;
+      margin-left: auto;
+      text-indent: 50px;
+      font-family: "Roboto", sans-serif;
+    }
+    &::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      height: 42px;
+      width: 42px;
+      right: -21px;
+      background: var(--mainText);
+      transform: rotate(45deg);
+    }
+  }
+
+  .row {
+    position: relative;
+    margin-top: 25px;
+    margin: 25px auto 25px auto;
+    height: auto;
+    max-width: 800px;
+    overflow: hidden;
+    @include centerStuff;
+    justify-content: flex-start;
+    .row-main {
+      border-left: 5px dashed var(--background);
+      height: 100%;
+      position: absolute;
+      padding: 20px 20px 20px 100px;
+      margin-left: 10px;
+      margin-right: auto;
+      @include centerStuff;
+      .row-txt {
+        max-width: 900px;
+        margin-right: auto;
+        padding: 10px;
+        h2 {
+          font-family: "Roboto", sans-serif;
+          font-weight: 2000;
+          color: #fff;
+          font-size: 2rem;
+          margin-bottom: 15px;
+          text-shadow: 0 0 100px var(--mainText);
+        }
+        p {
+          font-size: 1rem;
+          font-family: "Roboto", sans-serif;
+          color: rgba(255, 255, 255, 0.9);
+          text-indent: 20px;
+          text-shadow: 0 0 100px var(--mainText);
+        }
+      }
+    }
+    .row-bg {
+      @include centerStuff;
+      filter: opacity(0.1) saturate(0);
+      transform: rotate(19deg) scale(2);
+      max-height: 200px;
+      max-width: 300px;
+      margin-left: 70%;
+      -webkit-user-drag: none;
+    }
+  }
+}
+
+footer {
+  height: 500px;
+  width: 100%;
+  margin-top: 150px;
+  background: var(--mainColor)
+}
+
+// ROW COLORS
+
+#html {
+  @include rowColor(10);
+}
+
+#css {
+  @include rowColor(222);
+}
+
+#js {
+  @include rowColor(50);
+}
+
+#git {
+  @include rowColor(10);
+}
+
+#nodejs {
+  @include rowColor(110);
+}
+
+#express {
+  @include rowColor(70);
+}
+
+.general {
+  background: linear-gradient(
+    90deg,
+    hsla(225, 32%, 15%, 0.85),
+    hsla(225, 32%, 15%, 0.65)
+  );
+}
+
+@media (max-width: 600px) {
+  main {
+    .profile {
+      height: 300px;
+    }
+    .knowledge {
+      margin: 100px 40px 25px 0;
+      max-width: 300px;
+      p {
+        font-size: 2rem;
+        margin-right: 30px;
+      }
+    }
+    .row {
+      height: 250px;
+      .row-main {
+        padding: 10px;
+      }
+    }
+  }
+
+  .illustration-wrapper {
+    display: none;
+  }
+}
