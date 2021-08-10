@@ -28,7 +28,7 @@ header .top-bar {
   width: 100%;
   background: var(--mainColor);
   display: flex;
-  padding: 4px 20%;
+  padding: 4px 15%;
   box-shadow: 0 0 2px #1f052e;
 }
 header .top-bar .switch {
@@ -51,6 +51,7 @@ header .top-bar .switch .switch-btn {
 }
 header .top-bar .medias {
   display: flex;
+  justify-content: flex-end;
   width: 150px;
   height: 25px;
   padding: 2px;
@@ -217,14 +218,12 @@ main .row .row-main .row-txt h2 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 15px;
-  text-shadow: 0 0 100px var(--mainText);
 }
 main .row .row-main .row-txt p {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   color: rgba(255, 255, 255, 0.9);
   text-indent: 20px;
-  text-shadow: 0 0 100px var(--mainText);
 }
 main .row .row-bg {
   display: flex;

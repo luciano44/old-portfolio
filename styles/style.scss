@@ -43,7 +43,7 @@ header {
     width: 100%;
     background: var(--mainColor);
     display: flex;
-    padding: 4px 20%;
+    padding: 4px 15%;
     box-shadow: 0 0 2px rgb(31, 5, 46);
     .switch{
       display:flex;
@@ -65,6 +65,7 @@ header {
     }
     .medias{
       display: flex;
+      justify-content: flex-end;
       width: 150px;
       height: 25px;
       padding: 2px;
@@ -230,14 +231,12 @@ main {
           color: #fff;
           font-size: 2rem;
           margin-bottom: 15px;
-          text-shadow: 0 0 100px var(--mainText);
         }
         p {
           font-size: 1rem;
           font-family: "Roboto", sans-serif;
           color: rgba(255, 255, 255, 0.9);
           text-indent: 20px;
-          text-shadow: 0 0 100px var(--mainText);
         }
       }
     }
