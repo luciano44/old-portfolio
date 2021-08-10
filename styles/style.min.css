@@ -119,7 +119,7 @@ main .profile {
   box-shadow: inset 10px 0 0 #f7b56e;
   width: 90%;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 100px auto;
   height: 200px;
   padding: 10px;
   border-radius: 0 15px 15px 0;
@@ -135,11 +135,18 @@ main .profile .profile-main .profile-title {
   margin-bottom: 30px;
 }
 main .profile .profile-main .profile-description {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.9rem;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   max-width: 600px;
+}
+main .profile:last-of-type {
+  margin: 100px auto;
+  height: 130px;
+}
+main .profile:last-of-type .profile-title {
+  margin-bottom: 20px;
 }
 main .arrow-wrapper {
   margin: 80px auto;
@@ -187,7 +194,8 @@ main .knowledge::before {
 main .row {
   position: relative;
   margin-top: 25px;
-  margin: 25px auto 25px auto;
+  margin: 25px auto;
+  border-radius: 3px;
   height: auto;
   max-width: 800px;
   overflow: hidden;
@@ -215,14 +223,14 @@ main .row .row-main .row-txt {
 main .row .row-main .row-txt h2 {
   font-family: "Roboto", sans-serif;
   font-weight: 2000;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 2rem;
   margin-bottom: 15px;
 }
 main .row .row-main .row-txt p {
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.8);
   text-indent: 20px;
 }
 main .row .row-bg {
@@ -236,11 +244,28 @@ main .row .row-bg {
   margin-left: 70%;
   -webkit-user-drag: none;
 }
+main .projects {
+  display: flex;
+  height: 200px;
+  width: 100%;
+  max-width: 800px;
+  margin: 16px auto;
+  background: var(--mainColor);
+}
+main .projects .project {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.582);
+  flex: 1 0 33%;
+  margin: 1px;
+  background: rgba(52, 113, 133, 0.144);
+}
 
 footer {
-  height: 500px;
+  height: 250px;
   width: 100%;
-  margin-top: 150px;
   background: var(--mainColor);
 }
 
@@ -285,7 +310,7 @@ footer {
     margin-right: 30px;
   }
   main .row {
-    height: 250px;
+    height: 300px;
   }
   main .row .row-main {
     padding: 10px;
