@@ -29,7 +29,7 @@ header .top-bar {
   background: var(--mainColor);
   display: flex;
   padding: 4px 15%;
-  box-shadow: 0 0 2px #1f052e;
+  box-shadow: 0 -10px 35px var(--mainColor);
 }
 header .top-bar .switch {
   display: flex;
@@ -118,8 +118,8 @@ main .profile {
   align-items: center;
   box-shadow: inset 10px 0 0 #f7b56e;
   width: 90%;
-  max-width: 800px;
-  margin: 100px auto;
+  max-width: 700px;
+  margin: 50px auto;
   height: 200px;
   padding: 10px;
   border-radius: 0 15px 15px 0;
@@ -142,7 +142,7 @@ main .profile .profile-main .profile-description {
   max-width: 600px;
 }
 main .profile:last-of-type {
-  margin: 100px auto;
+  background: red;
   height: 130px;
 }
 main .profile:last-of-type .profile-title {
@@ -244,12 +244,34 @@ main .row .row-bg {
   margin-left: 70%;
   -webkit-user-drag: none;
 }
+main #html {
+  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
+}
+main #css {
+  background: linear-gradient(90deg, #08225e, rgba(8, 34, 94, 0.85));
+}
+main #js {
+  background: linear-gradient(90deg, #5e5008, rgba(94, 80, 8, 0.85));
+}
+main #git {
+  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
+}
+main #nodejs {
+  background: linear-gradient(90deg, #165e08, rgba(22, 94, 8, 0.85));
+}
+main #express {
+  background: linear-gradient(90deg, #505e08, rgba(80, 94, 8, 0.85));
+}
+main .general {
+  background: linear-gradient(90deg, rgba(26, 32, 50, 0.85), rgba(26, 32, 50, 0.65));
+}
 main .projects {
   display: flex;
-  height: 200px;
   width: 100%;
+  height: auto;
   max-width: 800px;
   margin: 16px auto;
+  padding: 10px 0;
   background: var(--mainColor);
 }
 main .projects .project {
@@ -257,9 +279,11 @@ main .projects .project {
   justify-content: space-evenly;
   align-items: center;
   font-style: italic;
+  height: 200px;
+  width: 200px;
   color: rgba(255, 255, 255, 0.582);
-  flex: 1 0 33%;
-  margin: 1px;
+  margin: 0 auto;
+  border: 1px solid rgba(128, 128, 128, 0.137);
   background: rgba(52, 113, 133, 0.144);
 }
 
@@ -267,34 +291,6 @@ footer {
   height: 250px;
   width: 100%;
   background: var(--mainColor);
-}
-
-#html {
-  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
-}
-
-#css {
-  background: linear-gradient(90deg, #08225e, rgba(8, 34, 94, 0.85));
-}
-
-#js {
-  background: linear-gradient(90deg, #5e5008, rgba(94, 80, 8, 0.85));
-}
-
-#git {
-  background: linear-gradient(90deg, #5e1608, rgba(94, 22, 8, 0.85));
-}
-
-#nodejs {
-  background: linear-gradient(90deg, #165e08, rgba(22, 94, 8, 0.85));
-}
-
-#express {
-  background: linear-gradient(90deg, #505e08, rgba(80, 94, 8, 0.85));
-}
-
-.general {
-  background: linear-gradient(90deg, rgba(26, 32, 50, 0.85), rgba(26, 32, 50, 0.65));
 }
 
 @media (max-width: 600px) {
@@ -314,6 +310,9 @@ footer {
   }
   main .row .row-main {
     padding: 10px;
+  }
+  main .projects {
+    flex-direction: column;
   }
 
   .illustration-wrapper {

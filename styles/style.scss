@@ -44,7 +44,7 @@ header {
     background: var(--mainColor);
     display: flex;
     padding: 4px 15%;
-    box-shadow: 0 0 2px rgb(31, 5, 46);
+    box-shadow: 0 -10px 35px var(--mainColor);
     .switch{
       display:flex;
       align-items: center;
@@ -135,8 +135,8 @@ main {
     @include centerStuff;
     box-shadow: inset 10px 0 0 hsl(31,89%,70%);
     width: 90%;
-    max-width: 800px;
-    margin: 100px auto;
+    max-width: 700px;
+    margin: 50px auto;
     height: 200px;
     padding: 10px;
     border-radius: 0 15px 15px 0;
@@ -161,7 +161,7 @@ main {
   }
 
   .profile:last-of-type{
-    margin: 100px auto;
+    background:red;
     height: 130px;
     .profile-title{
       margin-bottom: 20px;
@@ -260,19 +260,57 @@ main {
     }
   }
 
+    // ROW COLORS
+
+  #html {
+    @include rowColor(10);
+  }
+
+  #css {
+    @include rowColor(222);
+  }
+
+  #js {
+    @include rowColor(50);
+  }
+
+  #git {
+    @include rowColor(10);
+  }
+
+  #nodejs {
+    @include rowColor(110);
+  }
+
+  #express {
+    @include rowColor(70);
+  }
+
+  .general {
+    background: linear-gradient(
+      90deg,
+      hsla(225, 32%, 15%, 0.85),
+      hsla(225, 32%, 15%, 0.65)
+    );
+  }
+
   .projects{
     display: flex;
-    height: 200px;
     width: 100%;
+    height: auto;
     max-width: 800px;
     margin: 16px auto;
+    padding: 10px 0;
     background: var(--mainColor);
     .project{
       @include centerStuff;
       font-style: italic;
+      height: 200px;
+      width: 200px;
       color: rgba(255, 255, 255, 0.582);
-      flex: 1 0 33%;
-      margin: 1px;
+      // flex: 1 0 33%;
+      margin: 0 auto;
+      border: 1px solid rgba(128, 128, 128, 0.137);
       background:rgba(52, 113, 133, 0.144);
     }
   }
@@ -284,39 +322,7 @@ footer {
   background: var(--mainColor)
 }
 
-// ROW COLORS
 
-#html {
-  @include rowColor(10);
-}
-
-#css {
-  @include rowColor(222);
-}
-
-#js {
-  @include rowColor(50);
-}
-
-#git {
-  @include rowColor(10);
-}
-
-#nodejs {
-  @include rowColor(110);
-}
-
-#express {
-  @include rowColor(70);
-}
-
-.general {
-  background: linear-gradient(
-    90deg,
-    hsla(225, 32%, 15%, 0.85),
-    hsla(225, 32%, 15%, 0.65)
-  );
-}
 
 @media (max-width: 600px) {
   main {
@@ -336,6 +342,13 @@ footer {
       .row-main {
         padding: 10px;
       }
+    }
+    .projects{
+      flex-direction: column;
+      // .project{
+      //   height: 500px;
+      //   width: 500px;
+      // }
     }
   }
 
