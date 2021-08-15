@@ -5,8 +5,8 @@
   color: white;
 }
 
-html{
-  scroll-behavior: smooth;
+a{
+  text-decoration: none;
 }
 
 @mixin centerStuff {
@@ -304,14 +304,33 @@ main {
     background: var(--mainColor);
     .project{
       @include centerStuff;
-      font-style: italic;
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      cursor: pointer;
       height: 200px;
       width: 200px;
-      color: rgba(255, 255, 255, 0.582);
-      // flex: 1 0 33%;
+      color: #fff;
       margin: 0 auto;
-      border: 1px solid rgba(128, 128, 128, 0.137);
-      background:rgba(52, 113, 133, 0.144);
+      border: 1px solid rgba(128, 128, 128, 0.1);
+      overflow: hidden;
+      .pet-photos-bg{
+        background: #00AAFF;
+      }
+      &:hover .project-bg img{
+        width: 98%
+      }
+      .project-bg{
+        @include centerStuff;
+        position: absolute; 
+        top: 0;
+        height: inherit;
+        width: inherit;
+        img{
+          transition: width .3s;
+          width: 85%;
+        }
+      }
     }
   }
 }
