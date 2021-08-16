@@ -28,8 +28,17 @@ header .top-bar {
   width: 100%;
   background: var(--mainColor);
   display: flex;
-  padding: 4px 15%;
+  padding: 4px 20%;
   box-shadow: 0 -10px 35px var(--mainColor);
+}
+header .top-bar .switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+header .top-bar .switch-wrapper p {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  margin-right: 5px;
 }
 header .top-bar .switch {
   display: flex;
