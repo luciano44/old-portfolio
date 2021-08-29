@@ -305,6 +305,8 @@ main {
 
   .projects{
     display: flex;
+    justify-content:center;
+    align-items: center;
     width: 100%;
     height: auto;
     max-width: 800px;
@@ -320,14 +322,17 @@ main {
       height: 200px;
       width: 200px;
       color: #fff;
-      margin: 0 auto;
+      margin: 5px;
       border: 1px solid rgba(128, 128, 128, 0.1);
       overflow: hidden;
       .pet-photos-bg{
         background: #00AAFF;
       }
+      .userlist-bg{
+        background: #C8DCF1;
+      }
       &:hover .project-bg img{
-        width: 98%
+        width: 90%
       }
       .project-bg{
         @include centerStuff;
@@ -373,10 +378,11 @@ footer {
     }
     .projects{
       flex-direction: column;
-      // .project{
-      //   height: 500px;
-      //   width: 500px;
-      // }
+      padding: 10px;
+      .project{
+        height: 200px;
+        width: 100%;
+      }
     }
   }
 

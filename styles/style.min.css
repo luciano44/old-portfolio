@@ -276,6 +276,8 @@ main .general {
 }
 main .projects {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
   max-width: 800px;
@@ -294,15 +296,18 @@ main .projects .project {
   height: 200px;
   width: 200px;
   color: #fff;
-  margin: 0 auto;
+  margin: 5px;
   border: 1px solid rgba(128, 128, 128, 0.1);
   overflow: hidden;
 }
 main .projects .project .pet-photos-bg {
   background: #00AAFF;
 }
+main .projects .project .userlist-bg {
+  background: #C8DCF1;
+}
 main .projects .project:hover .project-bg img {
-  width: 98%;
+  width: 90%;
 }
 main .projects .project .project-bg {
   display: flex;
@@ -344,6 +349,11 @@ footer {
   }
   main .projects {
     flex-direction: column;
+    padding: 10px;
+  }
+  main .projects .project {
+    height: 200px;
+    width: 100%;
   }
 
   .illustration-wrapper {
