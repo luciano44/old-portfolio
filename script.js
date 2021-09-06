@@ -3,16 +3,19 @@ const root = document.documentElement;
 const switchMode = document.querySelector(".switch");
 const switchBtn = document.querySelector(".switch-btn");
 
-
 let theme;
 
 //verifica se existe a "theme" no localStorage e seta o tema de acordo
-if (localStorage.getItem("theme")){
-    theme = localStorage.getItem("theme")
-    if  (theme == 'day')      { dayTheme() }
-    if  (theme == 'night')    { nightTheme() }
-}else{
-    theme = 'day'
+if (localStorage.getItem("theme")) {
+  theme = localStorage.getItem("theme");
+  if (theme == "day") {
+    dayTheme();
+  }
+  if (theme == "night") {
+    nightTheme();
+  }
+} else {
+  theme = "day";
 }
 
 // anima flecha apontando para baixo
@@ -27,13 +30,13 @@ setInterval(function () {
 // add click listener na flecha para scrollar p/ baixo a altura da tela
 arrow.addEventListener("click", () => {
   window.scrollTo({
-    top: window.innerHeight
+    top: window.innerHeight,
   });
 });
 
 // add click listener no botão para trocar de tema
 switchMode.addEventListener("click", () => {
-    checkTheme()
+  checkTheme();
 });
 
 // tema escuro
@@ -42,7 +45,7 @@ function nightTheme() {
   root.style.setProperty("--mainText", "#fff");
   arrow.style.filter = "invert(1)";
   switchBtn.style.marginLeft = "19px";
-  localStorage.setItem("theme", 'night')
+  localStorage.setItem("theme", "night");
 }
 
 //tema claro
@@ -52,16 +55,31 @@ function dayTheme() {
   root.style.setProperty("--mainText", "hsl(227,31%,15%)");
   arrow.style.filter = "invert(0)";
   switchBtn.style.marginLeft = "0px";
-  localStorage.setItem("theme", 'day')
+  localStorage.setItem("theme", "day");
 }
 
 //checa o estado da variavel 'theme' e seta o tema
-function checkTheme(){
-    if (theme == 'day') {
-        theme = 'night'
-        nightTheme()
-      } else {
-        theme = 'day'
-        dayTheme()
-      }
+function checkTheme() {
+  if (theme == "day") {
+    theme = "night";
+    nightTheme();
+  } else {
+    theme = "day";
+    dayTheme();
+  }
 }
+
+function textAnimation() {
+  const nameText = document.querySelector(".main-text h1");
+  const portfolioText = document.querySelector(".main-text h3");
+
+  setTimeout(() => {
+    nameText.style.filter = "opacity(1)";
+    portfolioText.style.filter = "opacity(.6)";
+
+    nameText.style.left = "0";
+    portfolioText.style.left = "0";
+  }, 250);
+}
+
+textAnimation();

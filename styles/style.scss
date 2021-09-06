@@ -5,7 +5,7 @@
   color: white;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -20,13 +20,13 @@ a{
     90deg,
     hsla($cor, 85%, 20%, 1),
     hsla($cor, 85%, 20%, 0.85)
-    );
+  );
 }
 
 :root {
   --background: #fff;
-  --mainText: hsl(227,31%,15%);
-  --mainColor: hsl(227,31%,15%);
+  --mainText: hsl(227, 31%, 15%);
+  --mainColor: hsl(227, 31%, 15%);
   --description: red;
 }
 
@@ -45,17 +45,17 @@ header {
     display: flex;
     padding: 4px 20%;
     box-shadow: 0 -10px 35px var(--mainColor);
-    .switch-wrapper{
+    .switch-wrapper {
       display: flex;
       align-items: center;
-      p{
+      p {
         font-size: 14px;
         font-family: "Roboto", sans-serif;
         margin-right: 5px;
       }
     }
-    .switch{
-      display:flex;
+    .switch {
+      display: flex;
       align-items: center;
       background: rgb(255, 255, 255);
       padding: 3px;
@@ -63,23 +63,23 @@ header {
       height: 70%;
       min-width: 40px;
       cursor: pointer;
-      .switch-btn{
+      .switch-btn {
         margin-left: 0px;
-        transition: ease-in-out margin-left .2s;
+        transition: ease-in-out margin-left 0.2s;
         border-radius: 10px;
         background: var(--mainColor);
-        height:15px;
+        height: 15px;
         width: 15px;
       }
     }
-    .medias{
+    .medias {
       display: flex;
       justify-content: flex-end;
       width: 150px;
       height: 25px;
       padding: 2px;
       a {
-        img{
+        img {
           height: inherit;
         }
         margin-left: 15px;
@@ -101,7 +101,6 @@ header {
         background: hsla(200, 100%, 100%, 0%);
       }
     }
-    
   }
 
   .main-text {
@@ -114,17 +113,24 @@ header {
     text-align: center;
     .main-text-left {
       h1 {
+        position: relative;
+        left: 50px;
         font-family: "Roboto", monospace;
         color: var(--mainText);
         font-weight: 900;
         margin-bottom: 50px;
+        transition: cubic-bezier(0.54, 0.74, 0.54, 0.74) 1.25s;
+        filter: opacity(0);
       }
       h3 {
+        position: relative;
+        left: -50px;
         font-family: "Inconsolata", monospace;
         color: var(--mainText);
-        font-weight: 200;
         font-size: 1.5rem;
         letter-spacing: 10px;
+        transition: cubic-bezier(0.54, 0.74, 0.54, 0.74) 1.25s;
+        filter: opacity(0);
       }
     }
     .illustration-wrapper {
@@ -142,7 +148,7 @@ header {
 main {
   .profile {
     @include centerStuff;
-    box-shadow: inset 10px 0 0 hsl(31,89%,70%);
+    box-shadow: inset 10px 0 0 hsl(31, 89%, 70%);
     width: 90%;
     max-width: 700px;
     margin: 50px auto;
@@ -169,10 +175,10 @@ main {
     }
   }
 
-  .profile:last-of-type{
-    background:red;
+  .profile:last-of-type {
+    background: red;
     height: 130px;
-    .profile-title{
+    .profile-title {
       margin-bottom: 20px;
     }
   }
@@ -269,7 +275,7 @@ main {
     }
   }
 
-    // ROW COLORS
+  // ROW COLORS
 
   #html {
     @include rowColor(10);
@@ -303,9 +309,9 @@ main {
     );
   }
 
-  .projects{
+  .projects {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     width: 100%;
     height: auto;
@@ -313,7 +319,7 @@ main {
     margin: 16px auto;
     padding: 10px 0;
     background: var(--mainColor);
-    .project{
+    .project {
       @include centerStuff;
       position: relative;
       font-family: "Roboto", sans-serif;
@@ -325,23 +331,23 @@ main {
       margin: 5px;
       border: 1px solid rgba(128, 128, 128, 0.1);
       overflow: hidden;
-      .pet-photos-bg{
-        background: #00AAFF;
+      .pet-photos-bg {
+        background: #00aaff;
       }
-      .userlist-bg{
-        background: #C8DCF1;
+      .userlist-bg {
+        background: #c8dcf1;
       }
-      &:hover .project-bg img{
-        width: 90%
+      &:hover .project-bg img {
+        width: 90%;
       }
-      .project-bg{
+      .project-bg {
         @include centerStuff;
-        position: absolute; 
+        position: absolute;
         top: 0;
         height: inherit;
         width: inherit;
-        img{
-          transition: width .3s;
+        img {
+          transition: width 0.3s;
           width: 85%;
         }
       }
@@ -352,10 +358,8 @@ main {
 footer {
   height: 250px;
   width: 100%;
-  background: var(--mainColor)
+  background: var(--mainColor);
 }
-
-
 
 @media (max-width: 600px) {
   main {
@@ -376,10 +380,10 @@ footer {
         padding: 10px;
       }
     }
-    .projects{
+    .projects {
       flex-direction: column;
       padding: 10px;
-      .project{
+      .project {
         height: 200px;
         width: 100%;
       }

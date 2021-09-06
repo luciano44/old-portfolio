@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch styles/style.scss styles/style.min.css"
+    "sass": "sass --watch styles/style.scss styles/style.min.css --style compressed"
   },
   "keywords": [],
   "author": "",
